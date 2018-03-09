@@ -48,7 +48,7 @@
 		.section {
 			margin-top: 5em;
 		}
-		.section-form {
+		.section-form, .section-head {
 			padding-top: 25px;
 			margin-top: 0;
 		}
@@ -58,7 +58,7 @@
 		.tweet img {
 			width: 60%;
 		}
-		.map img {
+		.full-img img {
 			width: 100%;
 		}
 		form {
@@ -176,8 +176,8 @@
 			.social-media-buttons .facebook {
 				background-color: #234769;
 			}
-		#head div.sp_fb_large a,
-		#head div.sp_tw_large a {
+		#overlord div.sp_fb_large a,
+		#overlord div.sp_tw_large a {
 			color: transparent;
 			background-color: transparent;
 			position: absolute;
@@ -190,32 +190,32 @@
 </head>
 
 <body>
-<div id="head">
-	<div class="head-header">
-		<h1>Net neutrality PROTECTS conservative voices on the internet</h1>
-	</div>
-	<div class="head-copy">
-		<p>
-			Net neutrality is the basic technological principle that has guided the
-			Internet since the beginning. It prevents government-friendly monopolies from
-			abusing their gatekeeper power, and makes the Internet a powerful platform for
-			economic innovation, free speech, and the free exchange of ideas. It has helped
-			conservative websites like Breitbart and Infowars find an audience, and it has
-			protected them from politically-motivated censorship.
-		</p>
-	</div>
-	<div class="social-media-buttons">
-		<div class="share-bar twitter">
-			<span>Share on twitter</span> <img src="/images/share/twitter_white.svg" />
-			<div class="sp_186645 sp_tw_large" ></div>
-		</div>
-		<div class="share-bar facebook">
-			<span>Share on facebook</span> <img src="/images/share/facebook_white.svg" />
-			<div class="sp_186643 sp_fb_large" ></div>
-		</div>
-	</div>
-</div>
 <div id="overlord">
+	<div class="section section-head">
+		<div class="head-header">
+			<h1>Net neutrality PROTECTS conservative voices on the internet</h1>
+		</div>
+		<div class="head-copy">
+			<p>
+				Net neutrality is the basic technological principle that has guided the
+				Internet since the beginning. It prevents government-friendly monopolies from
+				abusing their gatekeeper power, and makes the Internet a powerful platform for
+				economic innovation, free speech, and the free exchange of ideas. It has helped
+				conservative websites like Breitbart and Infowars find an audience, and it has
+				protected them from politically-motivated censorship.
+			</p>
+		</div>
+		<div class="social-media-buttons">
+			<div class="share-bar twitter">
+				<span>Share on twitter</span> <img src="/images/share/twitter_white.svg" />
+				<div class="sp_186645 sp_tw_large" ></div>
+			</div>
+			<div class="share-bar facebook">
+				<span>Share on facebook</span> <img src="/images/share/facebook_white.svg" />
+				<div class="sp_186643 sp_fb_large" ></div>
+			</div>
+		</div>
+	</div>
 	<div class="section section-form">
 		<h2>Sign the petition to Republican lawmakers:</h2>
 
@@ -240,6 +240,10 @@
 		<p>
 			Killing net neutrality will silence conservative voices online. Protect
 			freedom on the internet. Protect net neutrality.
+		</p>
+
+		<p class="full-img">
+			<img src="images/tread_protest.png" alt="" />
 		</p>
 	</div>
 
@@ -314,7 +318,7 @@
 		<p>
 			The green areas of this map show where customers have only one option:
 		</p>
-		<p class="map">
+		<p class="full-img">
 			<img src="images/tread_map.png" alt="Protecting voices" />
 		</p>
 
