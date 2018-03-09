@@ -28,10 +28,15 @@
 		}
 		h1, h2, h3 {
 			font-family: "tex_gyre_herosbold";
+			font-weight: bold;
 			color: #171a29;
+			margin: 0;
 		}
 		h1 {
-			font-size: 60px;
+			font-size: 40px;
+		}
+		h2 {
+			font-size: 36px;
 		}
 		p {
 			font-family: "tex_gyre_herosregular";
@@ -41,9 +46,10 @@
 		div {
 		}
 		.section {
-			margin-top: 2em;
+			margin-top: 5em;
 		}
-		.section-head {
+		.section-form {
+			padding-top: 25px;
 			margin-top: 0;
 		}
 		.tweet {
@@ -55,13 +61,57 @@
 		.map img {
 			width: 100%;
 		}
+		form {
+			margin: 15px auto;
+			max-width: 400px;
+		}
 		input {
 			display: block;
 			width: 100%;
 			margin-bottom: 0.2em;
+			font-size: 30px;
+			padding: 10px 2px;
+		}
+		button.btn {
+			width: 100%;
+			display: block;
+			font-size: 30px;
+			height: 70px;
+			line-height: 70px;
+			background-color: #f94220;
+			color: white;
+			text-transform: uppercase;
+			font-family: "tex_gyre_herosbold";
+			font-weight: bold;
+			border-radius: 5px;
+			border: none;
+			text-decoration: none;
+			text-align: center;
 		}
 		.hidden {
 			display: none;
+		}
+		#head {
+			max-width: 900px;
+			height: 400px;
+			margin: 0px auto;
+			padding: 0;
+			background-image: url("images/tread_protest.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.head-header {
+			padding: 1em 0;
+		}
+		.head-header h1 {
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.8);
+			margin: 0;
+		}
+		.head-copy {
+			background-color: rgba(255, 255, 255, 0.8);
+			padding: 0.2em 0.6em;
+			font-size: 20px;
 		}
 		#footer {
 			max-width: 900px;
@@ -82,10 +132,11 @@
 </head>
 
 <body>
-<div id="overlord">
-	<div class="section section-head">
+<div id="head">
+	<div class="head-header">
 		<h1>Net neutrality PROTECTS conservative voices on the internet</h1>
-		<img src="images/tread_protest.png" alt="Protecting voices" />
+	</div>
+	<div class="head-copy">
 		<p>
 			Net neutrality is the basic technological principle that has guided the
 			Internet since the beginning. It prevents government-friendly monopolies from
@@ -95,25 +146,28 @@
 			protected them from politically-motivated censorship.
 		</p>
 	</div>
-
-	<div class="section">
+</div>
+<div id="overlord">
+	<div class="section section-form">
 		<h2>Sign the petition to Republican lawmakers:</h2>
 
-		<h3 class="hidden form-error">Hmmm... That didn't work :/</h3>
-		<form class="hidden-dp" id="fftf-form" method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
-			<input type="text" placeholder="Full Name" name="member[first_name]" required>
-			<input type="email" name="member[email]" placeholder="Email" required>
-			<input type="text" name="member[postcode]" placeholder="Zip Code">
-			<input type="hidden" name="member[country]" value="US">
-			<input class="hidden" type="checkbox" checked="checked" name="hp_enabled">
-			<input class="hidden" type="checkbox" name="hp_disabled">
-			<input class="hidden" type="text" name="guard">
-			<input type="hidden" name="contact_congress" value="0">
-			<input type="hidden" name="org" value="fftf">
-			<input type="hidden" name="an_tags" value="['net-neutrality']">
-			<input type="hidden" name="an_petition_id" value="b6fcdaba-c3d7-4c2e-8f41-7d894cb842fc">
-			<button class="btn">Sign</button>
-		</form>
+		<div class="form-container">
+			<h3 class="hidden form-error">Hmmm... That didn't work :/</h3>
+			<form class="hidden-dp" id="fftf-form" method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
+				<input type="text" placeholder="Full Name" name="member[first_name]" required>
+				<input type="email" name="member[email]" placeholder="Email" required>
+				<input type="text" name="member[postcode]" placeholder="Zip Code">
+				<input type="hidden" name="member[country]" value="US">
+				<input class="hidden" type="checkbox" checked="checked" name="hp_enabled">
+				<input class="hidden" type="checkbox" name="hp_disabled">
+				<input class="hidden" type="text" name="guard">
+				<input type="hidden" name="contact_congress" value="0">
+				<input type="hidden" name="org" value="fftf">
+				<input type="hidden" name="an_tags" value="['net-neutrality']">
+				<input type="hidden" name="an_petition_id" value="b6fcdaba-c3d7-4c2e-8f41-7d894cb842fc">
+				<button class="btn">Sign</button>
+			</form>
+		</div>
 
 		<p>
 			Killing net neutrality will silence conservative voices online. Protect
