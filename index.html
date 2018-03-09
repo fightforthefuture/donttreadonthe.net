@@ -14,27 +14,46 @@
 	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="webfonts/stylesheet.css" rel="stylesheet" />
 	<style>
+		* {
+			box-sizing: border-box;
+		}
 		body {
 			background-color: #f2f2f2;
 		}
 		#overlord {
 			background-color: #fff;
-			padding: 2em;
+			padding: 0.2em 1em;
 			max-width: 900px;
 			margin: 0px auto;
 		}
 		h1, h2, h3 {
 			font-family: "tex_gyre_herosbold";
+			color: #171a29;
+		}
+		h1 {
+			font-size: 60px;
 		}
 		p {
 			font-family: "tex_gyre_herosregular";
+			font-size: 18px;
+			line-height: 1.4em;
 		}
 		div {
 		}
-		img {
-			display: block;
+		.section {
+			margin-top: 2em;
+		}
+		.section-head {
+			margin-top: 0;
+		}
+		.tweet {
 			text-align: center;
-			max-width: 100%;
+		}
+		.tweet img {
+			width: 60%;
+		}
+		.map img {
+			width: 100%;
 		}
 		input {
 			display: block;
@@ -44,12 +63,27 @@
 		.hidden {
 			display: none;
 		}
+		#footer {
+			max-width: 900px;
+			margin: 0px auto;
+			background-color: #171a29;
+			text-align: center;
+			padding: 1em 0;
+		}
+		#footer p {
+			color: #ccc;
+			margin: 0px auto 10px;
+		}
+		#footer img {
+			display: inline-block;
+			width: 200px;
+		}
 	</style>
 </head>
 
 <body>
 <div id="overlord">
-	<div>
+	<div class="section section-head">
 		<h1>Net neutrality PROTECTS conservative voices on the internet</h1>
 		<img src="images/tread_protest.png" alt="Protecting voices" />
 		<p>
@@ -62,7 +96,7 @@
 		</p>
 	</div>
 
-	<div>
+	<div class="section">
 		<h2>Sign the petition to Republican lawmakers:</h2>
 
 		<h3 class="hidden form-error">Hmmm... That didn't work :/</h3>
@@ -87,7 +121,7 @@
 		</p>
 	</div>
 
-	<div>
+	<div class="section">
 		<h2>How will repealing net neutrality hurt conservatives?</h2>
 		<p>
 			Net neutrality ensures that Internet Service Providers (ISPs) can't block,
@@ -103,10 +137,12 @@
 			Valley companies even MORE POWER to silence conservative voices.
 			<a href="http://thehill.com/blogs/pundits-blog/media/303295-how-facebook-twitter-are-systematically-silencing-conservative">Do you think big Silicon Valley companies have a political agenda</a>?
 		</p>
-		<img src="images/tread_assange.png" alt="Protecting voices" />
+		<p class="tweet">
+			<img src="images/tread_assange.png" alt="Protecting voices" />
+		</p>
 	</div>
 
-	<div>
+	<div class="section">
 		<h2>Okay, they "could." But what makes you think they will?</h2>
 		<p>
 			Because they've done it over and over and over again. The term "net
@@ -138,10 +174,12 @@
 			neutrality? What do you think they'll do with even MORE control over the
 			internet?
 		</p>
-		<img src="images/tread_veritas.png" alt="Protecting voices" />
+		<p class="tweet">
+			<img src="images/tread_veritas.png" alt="Protecting voices" />
+		</p>
 	</div>
 
-	<div>
+	<div class="section">
 		<h2>So what? The free market will sort things out.</h2>
 		<p>
 			That would be the case… if ISPs operated in a free market. Unfortunately, for
@@ -154,7 +192,9 @@
 		<p>
 			The green areas of this map show where customers have only one option:
 		</p>
-		<img src="images/tread_map.png" alt="Protecting voices" />
+		<p class="map">
+			<img src="images/tread_map.png" alt="Protecting voices" />
+		</p>
 
 		<p>
 			Does that look like freedom of choice? Because to me, it looks like the result
@@ -162,7 +202,7 @@
 		</p>
 	</div>
 
-	<div>
+	<div class="section">
 		<h2>But net neutrality is heavy-handed Obama-era regulations!</h2>
 		<p>
 			WRONG. Mainstream media outlets constantly give Obama credit for net neutrality
@@ -172,7 +212,9 @@
 			ever since. The idea of net neutrality has literally been around since the
 			internet was invented.
 		</p>
-		<img src="images/tread_lee.png" alt="Protecting voices" />
+		<p class="tweet">
+			<img src="images/tread_lee.png" alt="Protecting voices" />
+		</p>
 		<p>
 			It's true that net neutrality is a regulation. But the ISPs' 
 			<a href="https://www.investopedia.com/insights/does-net-neutrality-stifle-investment-and-innovation/">studies claiming that it hurts investment and innovation have been debunked</a>.
@@ -183,7 +225,7 @@
 		</p>
 	</div>
 
-	<div>
+	<div class="section">
 		<h2>Bottom line: Don't let government bureaucrats steal your internet freedom</h2>
 		<p>
 			The fact of the matter is that
@@ -199,13 +241,19 @@
 			He even undermined States' rights by forbidding us from enacting our own laws.
 			Why would he do that? Hm...
 		</p>
-		<img src="images/tread_dotcom.png" alt="Protecting voices" />
+		<p class="tweet">
+			<img src="images/tread_dotcom.png" alt="Protecting voices" />
+		</p>
 		<p>
 			Congress works for you! So make them actually do their job for once. Tell them
 			that you support net neutrality, and they damn well better support net
 			neutrality, too.
 		</p>
 	</div>
+</div>
+<div id="footer">
+		<p>Built by:</p>
+		<img src="images/fftf-footer-logo.png" alt="Built by Fight for the Future" />
 </div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/app.js"></script>
