@@ -71,6 +71,17 @@
 			margin: 15px auto;
 			max-width: 400px;
 		}
+		.form-container .form-success {
+			text-align: center;
+		}
+		.form-container .form-error {
+			text-align: center;
+			color: red;
+		}
+		.privacy-policy {
+			font-size: 12px;
+			margin-bottom: 2em;
+		}
 		input {
 			display: block;
 			width: 100%;
@@ -192,6 +203,11 @@
 			width: 100%;
 			height: 100%;
 		}
+		@media screen and (max-width: 700px) {
+			.social-media-buttons {
+				display: none;
+			}
+		}
 	</style>
 </head>
 
@@ -231,7 +247,8 @@
 		</p>
 		
 		<div class="form-container">
-			<h3 class="hidden form-error">Hmmm... That didn't work :/</h3>
+			<h3 class="hidden form-success">Thank you for signing up!</h3>
+			<h3 class="hidden form-error">There was an error submitting this form.</h3>
 			<form class="hidden-dp" id="fftf-form" method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
 				<input type="text" placeholder="Full Name" name="member[first_name]" required>
 				<input type="email" name="member[email]" placeholder="Email" required>
@@ -245,6 +262,10 @@
 				<input type="hidden" name="an_tags" value="['net-neutrality']">
 				<input type="hidden" name="an_petition_id" value="b6fcdaba-c3d7-4c2e-8f41-7d894cb842fc">
 				<button class="btn">Sign</button>
+				<p class="privacy-policy">
+					Fight for the Future will contact you about future campaigns.
+					<a href="https://www.battleforthenet.com/privacy/">Privacy Policy</a>
+				</p>
 			</form>
 		</div>
 
