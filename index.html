@@ -11,402 +11,201 @@
 	<meta property="og:url" content="https://www.donttreadonthe.net/" />
 	<meta property="og:site_name" content="Don't Tread on the Net">
 	<meta property="og:type" content="article">
-	<link href="css/normalize.css" rel="stylesheet" />
-	<link href="webfonts/stylesheet.css" rel="stylesheet" />
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-		body {
-			background-color: #f2f2f2;
-		}
-		#overlord {
-			background-color: #fff;
-			padding: 0.2em 1em;
-			max-width: 900px;
-			margin: 0px auto;
-		}
-		h1, h2, h3 {
-			font-family: "tex_gyre_herosbold";
-			font-weight: bold;
-			color: #171a29;
-			margin: 0;
-		}
-		h1 {
-			font-size: 40px;
-		}
-		h2 {
-			font-size: 36px;
-		}
-		p {
-			font-family: "tex_gyre_herosregular";
-			font-size: 18px;
-			line-height: 1.4em;
-		}
-		div {
-		}
-		.section {
-			margin-top: 5em;
-		}
-		.section-form, .section-head {
-			padding-top: 25px;
-			margin-top: 0;
-		}
-		.tweet {
-			text-align: center;
-		}
-		.tweet img {
-			width: 60%;
-		}
-		.tread-img {
-			text-align: center;
-		}
-		.tread-img img {
-			width: 80%;
-		}
-		.full-img img {
-			width: 100%;
-		}
-		form {
-			margin: 15px auto;
-			max-width: 400px;
-		}
-		.form-container .form-success {
-			text-align: center;
-		}
-		.form-container .form-error {
-			text-align: center;
-			color: red;
-		}
-		.privacy-policy {
-			font-size: 12px;
-			margin-bottom: 2em;
-		}
-		input {
-			display: block;
-			width: 100%;
-			margin-bottom: 0.2em;
-			font-size: 30px;
-			padding: 10px 2px;
-		}
-		button.btn {
-			width: 100%;
-			display: block;
-			font-size: 30px;
-			height: 70px;
-			line-height: 70px;
-			background-color: #f94220;
-			color: white;
-			text-transform: uppercase;
-			font-family: "tex_gyre_herosbold";
-			font-weight: bold;
-			border-radius: 5px;
-			border: none;
-			text-decoration: none;
-			text-align: center;
-		}
-		.hidden {
-			display: none;
-		}
-		#head {
-			max-width: 900px;
-			height: 400px;
-			margin: 0px auto;
-			padding: 0;
-			background-image: url("images/tread_protest.png");
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		.head-header {
-			padding: 1em 0;
-		}
-		.head-header h1 {
-			text-align: center;
-			background-color: rgba(255, 255, 255, 0.8);
-			margin: 0;
-		}
-		.head-copy {
-			background-color: rgba(255, 255, 255, 0.8);
-			padding: 0.2em 0.6em;
-			font-size: 20px;
-		}
-		#footer {
-			max-width: 900px;
-			margin: 0px auto;
-			background-color: #171a29;
-			text-align: center;
-			padding: 1em 0;
-		}
-		#footer p {
-			color: #ccc;
-			margin: 0px auto 10px;
-		}
-		#footer img {
-			display: inline-block;
-			width: 200px;
-		}
-		.social-media-buttons {
-			position: absolute;
-			left: 0;
-			top: 500px;
-			z-index: 100;
-		}
-			.social-media-buttons .share-bar {
-				display: block;
-				position: relative;
-				height: 60px;
-				width: 80px;
-				border-radius: 0 30px 30px 0;
-				margin-bottom: 10px;
-				transition: width 0.2s ease-in;
-			}
-				.social-media-buttons .share-bar span {
-					font-family: "Open Sans", sans-serif;
-					font-weight: bold;
-					font-size: 13px;
-					color: white;
-					text-transform: uppercase;
-					display: block;
-					line-height: 60px;
-					width: 200px;
-					text-align: right;
-					opacity: 0;
-					position: absolute;
-					right: 80px;
-					transition: opacity 0.4s ease-in;
-				}
-				.social-media-buttons .share-bar img {
-					position: absolute;
-					height: 50px;
-					right: 15px;
-					top: 5px;
-				}
-			.social-media-buttons .share-bar:hover {
-				width: 250px;
-			}
-				.social-media-buttons .share-bar:hover span {
-					opacity: 1.0;
-				}
-			.social-media-buttons .twitter {
-				background-color: #2ecbf8;
-			}
-			.social-media-buttons .facebook {
-				background-color: #234769;
-			}
-		#overlord div.sp_fb_large a,
-		#overlord div.sp_tw_large a {
-			color: transparent;
-			background-color: transparent;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			height: 100%;
-		}
-		@media screen and (max-width: 700px) {
-			.social-media-buttons {
-				display: none;
-			}
-		}
-	</style>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/app.css" rel="stylesheet">
 </head>
 
 <body>
 <div id="overlord">
 	<div class="section section-head">
-		<div class="head-header">
-			<h1>Don't Tread on the Net</h1>
-		</div>
-		<div class="head-copy">
-			<p>
-				Net neutrality is the basic technological principle that has guided the
-				Internet since the beginning. It prevents government-friendly monopolies from
-				abusing their gatekeeper power, and makes the Internet a powerful platform for
-				economic innovation, free speech, and the free exchange of ideas. It has helped
-				conservative websites find an audience, and it has protected them from 
-				politically-motivated censorship.
-			</p>
-		</div>
-		<div class="social-media-buttons">
-			<div class="share-bar twitter">
-				<span>Share on twitter</span> <img src="/images/share/twitter_white.svg" />
-				<div class="sp_186645 sp_tw_large" ></div>
+		<div class="container">
+			<div class="clearfix">
+				<h1>Don't Tread on the Net</h1>
+
+				<div class="form-container" >
+					<h2>Sign the petition to Republican lawmakers:</h2>
+					<p>"Killing net neutrality will silence conservative voices online. Protect freedom on the internet. Protect net neutrality."</p>
+					<h3 class="hidden form-success">Thank you for signing up!</h3>
+					<h3 class="hidden form-error">There was an error submitting this form.</h3>
+					<form id="fftf-form" method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
+						<input type="text" placeholder="Full Name*" name="member[first_name]" required>
+						<input type="email" name="member[email]" placeholder="Email*" required>
+						<input type="text" name="member[postcode]" placeholder="Zip Code">
+						<input type="hidden" name="member[country]" value="US">
+						<input class="hidden" type="checkbox" checked="checked" name="hp_enabled">
+						<input class="hidden" type="checkbox" name="hp_disabled">
+						<input class="hidden" type="text" name="guard">
+						<input type="hidden" name="contact_congress" value="0">
+						<input type="hidden" name="org" value="fftf">
+						<input type="hidden" name="an_tags" value="['net-neutrality']">
+						<input type="hidden" name="an_petition_id" value="b6fcdaba-c3d7-4c2e-8f41-7d894cb842fc">
+						<button class="btn">Sign</button>
+						<p class="privacy-policy">
+							Fight for the Future will contact you about future campaigns.
+							<a href="https://www.battleforthenet.com/privacy/">Privacy Policy</a>
+						</p>
+					</form>
+				</div>
+
+				<div class="copy">
+					<img src="images/tread_protest.png" alt="" class="rounded">
+					<p>
+						Net neutrality is the basic technological principle that has guided the
+						Internet since the beginning. It prevents government-friendly monopolies from
+						abusing their gatekeeper power, and makes the Internet a powerful platform for
+						economic innovation, free speech, and the free exchange of ideas. It has helped
+						conservative websites find an audience, and it has protected them from 
+						politically-motivated censorship.
+					</p>
+				</div>
+
 			</div>
-			<div class="share-bar facebook">
-				<span>Share on facebook</span> <img src="/images/share/facebook_white.svg" />
-				<div class="sp_186643 sp_fb_large" ></div>
-			</div>
+			<div class="arrow-box"></div>
 		</div>
 	</div>
-	<div class="section section-form">
-		<h2>Sign the petition to Republican lawmakers:</h2>
 
-		<p>
-			"Killing net neutrality will silence conservative voices online. Protect
-			freedom on the internet. Protect net neutrality."
-		</p>
-		
-		<div class="form-container">
-			<h3 class="hidden form-success">Thank you for signing up!</h3>
-			<h3 class="hidden form-error">There was an error submitting this form.</h3>
-			<form class="hidden-dp" id="fftf-form" method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
-				<input type="text" placeholder="Full Name" name="member[first_name]" required>
-				<input type="email" name="member[email]" placeholder="Email" required>
-				<input type="text" name="member[postcode]" placeholder="Zip Code">
-				<input type="hidden" name="member[country]" value="US">
-				<input class="hidden" type="checkbox" checked="checked" name="hp_enabled">
-				<input class="hidden" type="checkbox" name="hp_disabled">
-				<input class="hidden" type="text" name="guard">
-				<input type="hidden" name="contact_congress" value="0">
-				<input type="hidden" name="org" value="fftf">
-				<input type="hidden" name="an_tags" value="['net-neutrality']">
-				<input type="hidden" name="an_petition_id" value="b6fcdaba-c3d7-4c2e-8f41-7d894cb842fc">
-				<button class="btn">Sign</button>
-				<p class="privacy-policy">
-					Fight for the Future will contact you about future campaigns.
-					<a href="https://www.battleforthenet.com/privacy/">Privacy Policy</a>
+	<div class="section section-main">
+		<div class="container clearfix">
+			<div class="copy">
+				<h2>How will repealing net neutrality hurt conservatives?</h2>
+				<p>
+					Net neutrality ensures that Internet Service Providers (ISPs) can't block,
+					censor or throttle traffic to websites. Without net neutrality, Comcast could
+					legally slow down traffic to conservative sites and speed up traffic to its own
+					news websites, <a href="https://en.wikipedia.org/wiki/MSNBC">like MSNBC</a>.
+					Verizon could legally
+					<a href="http://www.guns.com/2017/12/13/why-second-amendment-advocates-should-support-net-neutrality/">restrict people from websites that promote guns or sell guns online</a>
+					to be politically correct.
 				</p>
-			</form>
+				<p>
+					It's not just the ISPs, either. Killing net neutrality will give big Silicon
+					Valley companies even MORE POWER to silence conservative voices.
+					<a href="http://thehill.com/blogs/pundits-blog/media/303295-how-facebook-twitter-are-systematically-silencing-conservative">Do you think big Silicon Valley companies have a political agenda</a>?
+				</p>
+				<p class="tweet">
+					<img src="images/tread_assange.png" alt="Protecting voices" />
+				</p>
+
+				<h2>But what makes you think they will?</h2>
+				<p>
+					Because they've done it over and over and over again. The term "net
+					neutrality" was actually first used to discuss protecting Americans after
+					<a href="https://www.wired.com/story/guide-net-neutrality/">
+					Comcast banned users from protecting their own online privacy and AT&T
+					prevented customers from using their own wi-fi
+					routers</a>. And that was just
+					the beginning. Since then, Verizon, AT&amp;T and T-Mobile colluded with Google to
+					<a href="https://www.savetheinternet.com/blog/11/07/06/verizons-illegal-app-blocking">block innovative apps from entering the marketplace</a>.
+					And what about the time
+					<a href="http://fortune.com/2009/04/03/group-asks-fcc-to-probe-iphone-skype-restrictions/">AT&amp;T schemed with Apple to restrict access to Skype</a>?
+					Or when
+					<a href="https://www.theguardian.com/technology/2015/jun/22/major-internet-providers-slowing-traffic-speeds">all five major ISPs actually slowed down 75% of all internet traffic</a>?
+					The FCC’s repeal of net neutrality hasn’t even officially gone into effect yet
+					and &mdash; surprise, surprise! &mdash; 
+					<a href="https://www.att.com/att/sponsoreddata/en/index.html">AT&amp;T has already rolled out "sponsored data plan"</a>.
+				</p>
+				<p>
+					And what about those big Silicon Valley companies?
+					<a href="https://www.usatoday.com/story/tech/news/2016/01/29/facebook-cracks-down-on-gun-sales/79543652/">Facebook doesn't want private individuals to buy and sell guns</a>.
+					<a href="https://www.dailywire.com/news/25744/bombshell-report-twitter-admits-censoring-ryan-saavedra">Twitter shadow-bans users for supporting Donald Trump</a>.
+					<a href="http://www.breitbart.com/tech/2018/03/01/the-purge-youtube-mass-censors-conservatives-new-right-classical-liberals/">YouTube has purged conservative videos</a>.
+					<a href="https://www.rt.com/usa/419619-newsweek-retracted-franken-bots/">Medium deleted conservative accounts based on an article so fake that Newsweek had to retract it</a>.
+					This <a href="https://www.rt.com/op-ed/419961-google-twitter-facebook-censor-voices/">censorship is being perpetrated by the biggest players in social media</a>.
+				</p>
+				<p>
+					Is it any surprise that they've all quietly supported the repeal of net
+					neutrality? What do you think they'll do with even MORE control over the
+					internet?
+				</p>
+				<p class="tweet">
+					<img src="images/tread_veritas.png" alt="Protecting voices" />
+				</p>
+
+				<h2>So what? The free market will sort things out.</h2>
+				<p>
+					That would be the case… if ISPs operated in a free market. Unfortunately, for
+					years ISPs have operated in local and regional monopolies and duopolies,
+					driving up prices for everyday Americans while providing us with slow internet
+					speeds and terrible customer service. Did you know that 
+					<a href="https://arstechnica.com/information-technology/2017/06/50-million-us-homes-have-only-one-25mbps-internet-provider-or-none-at-all/">over 50 million American households have no choice for their ISP</a>?
+					I'm in one of them… are you?
+				</p>
+				<p>
+					The green areas of this map show where customers have only one option:
+				</p>
+				<p class="full-img">
+					<img src="images/tread_map.png" alt="Protecting voices" />
+				</p>
+				<p>
+					Does that look like freedom of choice? Because to me, it looks like the result
+					of <a href="https://www.theverge.com/2017/12/11/16746230/net-neutrality-fcc-isp-congress-campaign-contribution">ISPs spending $101,000,000 "lobbying" politicians to protect their companies from competition</a>.
+				</p>
+
+				<h2>But net neutrality is heavy-handed Obama-era regulations!</h2>
+				<p>
+					WRONG. Mainstream media outlets constantly give Obama credit for net neutrality
+					protections. But the 
+					<a href="https://apps.fcc.gov/edocs_public/attachmatch/FCC-05-151A1.pdf">Republican-led FCC actually adopted net neutrality as a policy under George W. Bush in 2005</a>,
+					and millions of people across the political spectrum have been fighting for it
+					ever since. The idea of net neutrality has literally been around since the
+					internet was invented.
+				</p>
+				<p class="tweet">
+					<img src="images/tread_lee.png" alt="Protecting voices" />
+				</p>
+				<p>
+					It's true that net neutrality is a regulation. But the ISPs' 
+					<a href="https://www.investopedia.com/insights/does-net-neutrality-stifle-investment-and-innovation/">studies claiming that it hurts investment and innovation have been debunked</a>.
+					<a href="https://hbr.org/2017/12/what-small-businesses-stand-to-lose-in-a-net-neutrality-rollback">Net neutrality protects the free market</a>
+					by preventing ISPs from picking winners and losers. And it ensures that NOBODY
+					can restrict your freedom of speech on the internet. Because
+					<a href="https://arstechnica.com/tech-policy/2018/03/20-porn-unblocking-fee-could-hit-internet-users-if-state-bill-becomes-law/">without net neutrality, the government WILL tell you what you can and can't do online</a>.
+				</p>
+
+				<h2>Bottom line: Don't let government bureaucrats steal your internet freedom</h2>
+				<p>
+					The fact of the matter is that
+					<a href="https://www.scribd.com/document/353285485/Freedman-Consulting-Net-Neutrality-Poll">77% of all Americans support keeping net neutrality</a>,
+					including 73% of Republicans and 76% of Independents. We know what's best for
+					us, so why is the FCC trying to shove these changes down our throats?
+				</p>
+				<p>
+					Ajit Pai, the Chairman of the FCC,
+					<a href="https://www.techdirt.com/articles/20171005/09400638350/anybody-claiming-net-neutrality-rules-killed-broadband-investment-is-lying-to-you.shtml">lied about his reasons for killing net neutrality</a>
+					and 
+					<a href="https://arstechnica.com/tech-policy/2017/11/why-the-fcc-ignored-public-opinion-in-its-push-to-kill-net-neutrality/">ignored comments from millions of Americans</a>.
+					He even undermined States' rights by forbidding us from enacting our own laws.
+					Why would he do that? Hm...
+				</p>
+				<p class="tweet">
+					<img src="images/tread_dotcom.png" alt="Protecting voices" />
+				</p>
+				<p>
+					Congress works for you! So make them actually do their job for once. Tell them
+					that you support net neutrality, and they damn well better support net
+					neutrality, too.
+				</p>
+			</div>
 		</div>
-
-		<p class="tread-img">
-			<img src="images/tread_protest.png" alt="" />
-		</p>
 	</div>
 
-	<div class="section">
-		<h2>How will repealing net neutrality hurt conservatives?</h2>
-		<p>
-			Net neutrality ensures that Internet Service Providers (ISPs) can't block,
-			censor or throttle traffic to websites. Without net neutrality, Comcast could
-			legally slow down traffic to conservative sites and speed up traffic to its own
-			news websites, <a href="https://en.wikipedia.org/wiki/MSNBC">like MSNBC</a>.
-			Verizon could legally
-			<a href="http://www.guns.com/2017/12/13/why-second-amendment-advocates-should-support-net-neutrality/">restrict people from websites that promote guns or sell guns online</a>
-			to be politically correct.
-		</p>
-		<p>
-			It's not just the ISPs, either. Killing net neutrality will give big Silicon
-			Valley companies even MORE POWER to silence conservative voices.
-			<a href="http://thehill.com/blogs/pundits-blog/media/303295-how-facebook-twitter-are-systematically-silencing-conservative">Do you think big Silicon Valley companies have a political agenda</a>?
-		</p>
-		<p class="tweet">
-			<img src="images/tread_assange.png" alt="Protecting voices" />
-		</p>
-	</div>
-
-	<div class="section">
-		<h2>But what makes you think they will?</h2>
-		<p>
-			Because they've done it over and over and over again. The term "net
-			neutrality" was actually first used to discuss protecting Americans after
-			<a href="https://www.wired.com/story/guide-net-neutrality/">
-			Comcast banned users from protecting their own online privacy and AT&T
-			prevented customers from using their own wi-fi
-			routers</a>. And that was just
-			the beginning. Since then, Verizon, AT&amp;T and T-Mobile colluded with Google to
-			<a href="https://www.savetheinternet.com/blog/11/07/06/verizons-illegal-app-blocking">block innovative apps from entering the marketplace</a>.
-			And what about the time
-			<a href="http://fortune.com/2009/04/03/group-asks-fcc-to-probe-iphone-skype-restrictions/">AT&amp;T schemed with Apple to restrict access to Skype</a>?
-			Or when
-			<a href="https://www.theguardian.com/technology/2015/jun/22/major-internet-providers-slowing-traffic-speeds">all five major ISPs actually slowed down 75% of all internet traffic</a>?
-			The FCC’s repeal of net neutrality hasn’t even officially gone into effect yet
-			and &mdash; surprise, surprise! &mdash; 
-			<a href="https://www.att.com/att/sponsoreddata/en/index.html">AT&amp;T has already rolled out "sponsored data plan"</a>.
-		</p>
-		<p>
-			And what about those big Silicon Valley companies?
-			<a href="https://www.usatoday.com/story/tech/news/2016/01/29/facebook-cracks-down-on-gun-sales/79543652/">Facebook doesn't want private individuals to buy and sell guns</a>.
-			<a href="https://www.dailywire.com/news/25744/bombshell-report-twitter-admits-censoring-ryan-saavedra">Twitter shadow-bans users for supporting Donald Trump</a>.
-			<a href="http://www.breitbart.com/tech/2018/03/01/the-purge-youtube-mass-censors-conservatives-new-right-classical-liberals/">YouTube has purged conservative videos</a>.
-			<a href="https://www.rt.com/usa/419619-newsweek-retracted-franken-bots/">Medium deleted conservative accounts based on an article so fake that Newsweek had to retract it</a>.
-			This <a href="https://www.rt.com/op-ed/419961-google-twitter-facebook-censor-voices/">censorship is being perpetrated by the biggest players in social media</a>.
-		</p>
-		<p>
-			Is it any surprise that they've all quietly supported the repeal of net
-			neutrality? What do you think they'll do with even MORE control over the
-			internet?
-		</p>
-		<p class="tweet">
-			<img src="images/tread_veritas.png" alt="Protecting voices" />
-		</p>
-	</div>
-
-	<div class="section">
-		<h2>So what? The free market will sort things out.</h2>
-		<p>
-			That would be the case… if ISPs operated in a free market. Unfortunately, for
-			years ISPs have operated in local and regional monopolies and duopolies,
-			driving up prices for everyday Americans while providing us with slow internet
-			speeds and terrible customer service. Did you know that 
-			<a href="https://arstechnica.com/information-technology/2017/06/50-million-us-homes-have-only-one-25mbps-internet-provider-or-none-at-all/">over 50 million American households have no choice for their ISP</a>?
-			I'm in one of them… are you?
-		</p>
-		<p>
-			The green areas of this map show where customers have only one option:
-		</p>
-		<p class="full-img">
-			<img src="images/tread_map.png" alt="Protecting voices" />
-		</p>
-
-		<p>
-			Does that look like freedom of choice? Because to me, it looks like the result
-			of <a href="https://www.theverge.com/2017/12/11/16746230/net-neutrality-fcc-isp-congress-campaign-contribution">ISPs spending $101,000,000 "lobbying" politicians to protect their companies from competition</a>.
-		</p>
-	</div>
-
-	<div class="section">
-		<h2>But net neutrality is heavy-handed Obama-era regulations!</h2>
-		<p>
-			WRONG. Mainstream media outlets constantly give Obama credit for net neutrality
-			protections. But the 
-			<a href="https://apps.fcc.gov/edocs_public/attachmatch/FCC-05-151A1.pdf">Republican-led FCC actually adopted net neutrality as a policy under George W. Bush in 2005</a>,
-			and millions of people across the political spectrum have been fighting for it
-			ever since. The idea of net neutrality has literally been around since the
-			internet was invented.
-		</p>
-		<p class="tweet">
-			<img src="images/tread_lee.png" alt="Protecting voices" />
-		</p>
-		<p>
-			It's true that net neutrality is a regulation. But the ISPs' 
-			<a href="https://www.investopedia.com/insights/does-net-neutrality-stifle-investment-and-innovation/">studies claiming that it hurts investment and innovation have been debunked</a>.
-			<a href="https://hbr.org/2017/12/what-small-businesses-stand-to-lose-in-a-net-neutrality-rollback">Net neutrality protects the free market</a>
-			by preventing ISPs from picking winners and losers. And it ensures that NOBODY
-			can restrict your freedom of speech on the internet. Because
-			<a href="https://arstechnica.com/tech-policy/2018/03/20-porn-unblocking-fee-could-hit-internet-users-if-state-bill-becomes-law/">without net neutrality, the government WILL tell you what you can and can't do online</a>.
-		</p>
-	</div>
-
-	<div class="section">
-		<h2>Bottom line: Don't let government bureaucrats steal your internet freedom</h2>
-		<p>
-			The fact of the matter is that
-			<a href="https://www.scribd.com/document/353285485/Freedman-Consulting-Net-Neutrality-Poll">77% of all Americans support keeping net neutrality</a>,
-			including 73% of Republicans and 76% of Independents. We know what's best for
-			us, so why is the FCC trying to shove these changes down our throats?
-		</p>
-		<p>
-			Ajit Pai, the Chairman of the FCC,
-			<a href="https://www.techdirt.com/articles/20171005/09400638350/anybody-claiming-net-neutrality-rules-killed-broadband-investment-is-lying-to-you.shtml">lied about his reasons for killing net neutrality</a>
-			and 
-			<a href="https://arstechnica.com/tech-policy/2017/11/why-the-fcc-ignored-public-opinion-in-its-push-to-kill-net-neutrality/">ignored comments from millions of Americans</a>.
-			He even undermined States' rights by forbidding us from enacting our own laws.
-			Why would he do that? Hm...
-		</p>
-		<p class="tweet">
-			<img src="images/tread_dotcom.png" alt="Protecting voices" />
-		</p>
-		<p>
-			Congress works for you! So make them actually do their job for once. Tell them
-			that you support net neutrality, and they damn well better support net
-			neutrality, too.
-		</p>
-	</div>
-</div>
-<div id="footer">
+	<div id="footer">
 		<p>Built by:</p>
-		<img src="images/fftf-footer-logo.png" alt="Built by Fight for the Future" />
+		<a href="https://www.fightforthefuture.org"><img src="images/fftf-footer-logo.png" alt="Built by Fight for the Future"></a>
+	</div>
+
+	<div class="social-media-buttons">
+		<div class="share-bar twitter">
+			<span>Share on twitter</span> <img src="/images/share/twitter_white.svg" />
+			<div class="sp_186645 sp_tw_large" ></div>
+		</div>
+		<div class="share-bar facebook">
+			<span>Share on facebook</span> <img src="/images/share/facebook_white.svg" />
+			<div class="sp_186643 sp_fb_large" ></div>
+		</div>
+	</div>
+	
 </div>
 <script src="//c.shpg.org/103/sp.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
