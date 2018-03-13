@@ -109,17 +109,28 @@ a {
 }
 
 .form-container {
-  background-color: #F9F9F9;
   color: #6D6660;
   width: 275px;
   float: right;
-  border-radius: 8px;
-  padding: 16px;
   box-shadow: rgba(76, 35, 7, 0.39) 0px 20px 90px 0;
   z-index: 2;
   position: fixed;
   left: 783px;
   animation: fade-in .3s;
+  border-radius: 8px;
+  transition: height .3s;
+}
+
+.form-active,
+.form-complete {
+  background-color: #F9F9F9;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.form-complete {
+  background-color: #fff;
+  animation: fade-in 1s;
 }
 
 .form-container h2 {
@@ -186,6 +197,24 @@ button.btn {
 
 button.btn:hover {
   cursor: pointer;
+}
+
+.form-complete h2 {
+  color: #76B440;
+  margin-bottom: 20px;
+}
+
+.form-complete .btn {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-complete .btn-facebook {
+  background-color: #324FCE;
+}
+
+.form-complete .btn-twitter {
+  background-color: #33ADFF;
 }
 
 #footer {
