@@ -52,7 +52,7 @@ h1 {
   font-size: 52px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 15px;
+  margin: 10px 0 35px;
 }
 
 h2 {
@@ -115,7 +115,7 @@ a {
   float: right;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: rgba(0,0,0,.5) 0px 2px 4px 0;
+  box-shadow: rgba(76, 35, 7, 0.39) 0px 20px 90px 0;
   z-index: 2;
   position: fixed;
   left: 783px;
@@ -153,13 +153,13 @@ a {
 }
 
 input {
-  border: 1px solid #A5521E;
+  border: 1px solid #afafaf;
   border-radius: 4px;
   display: block;
   width: 100%;
-  margin-bottom: 5px;
-  font-size: 20px;
-  padding: 10px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  padding: 11px;
   font-family: "Open Sans", sans-serif;
   color: #1D1D1D;
 }
