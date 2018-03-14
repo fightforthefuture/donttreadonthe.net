@@ -131,6 +131,11 @@ a {
 .form-complete {
   background-color: #fff;
   animation: fade-in 1s;
+  text-align: center;
+}
+
+.form-complete img.check {
+  height: 225px;
 }
 
 .form-container h2 {
@@ -202,6 +207,7 @@ button.btn:hover {
 .form-complete h2 {
   color: #76B440;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .form-complete .btn {
